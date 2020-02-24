@@ -8,7 +8,7 @@ install:
   - sudo apt install -y xvfb  # required for opening nwjs during tests on the ci server
 
 before_script:
-  - ln . ~/pynwjs && cd ~
+  - ln -s . ~/pynwjs && cd ~
   # test package installation
   - pip install --user -e ~/pynwjs  # required for pytest tests below
   - npm install ./pynwjs  # not required, but make sure that a failure is detected
