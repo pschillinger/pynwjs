@@ -10,8 +10,7 @@ and on the JavaScript side.
 
     .. code-block:: bash
 
-        cd path/to/pynwjs
-        pip install --user -e .
+        pip install --user pynwjs
 
 * **JavaScript**
 
@@ -20,7 +19,7 @@ and on the JavaScript side.
     .. code-block:: bash
 
         cd ~
-        npm install path/to/pynwjs
+        npm install pynwjs
 
 In addition, you will need the *nwjs* binaries
 to run any app developed with PyNWJS.

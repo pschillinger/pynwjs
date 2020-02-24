@@ -1,6 +1,6 @@
 {
   "name": "pynwjs",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Use nwjs as GUI in Python",
   "main": "src/pynwjs/pynwjs.js",
   "scripts": {
@@ -8,5 +8,13 @@
   },
   "author": "Philipp Schillinger",
   "license": "BSD 3",
-  "dependencies": {}
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pschillinger/pynwjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pschillinger/pynwjs/issues"
+  },
+  "homepage": "https://github.com/pschillinger/pynwjs"
 }
