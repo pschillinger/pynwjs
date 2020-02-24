@@ -1,14 +1,12 @@
 os: linux
 dist: xenial
-language: python
-python:
-  - "2.7"
-  - "3.6"
+language: generic
   
 install:
   - sudo apt-get update
   - sudo apt-get install -y dpkg # fix https://github.com/travis-ci/travis-ci/issues/10132
   - sudo apt install -y xvfb  # required for opening nwjs during tests on the ci server
+  - pip install --user pytest  # see https://medium.com/@dirk.avery/pytest-modulenotfounderror-no-module-named-requests-a770e6926ac5
 
 before_script:
   - ln -s $PWD ~/pynwjs && cd ~
@@ -21,7 +19,7 @@ before_script:
 script:
   - cd ~/pynwjs
   # test package installation
-  - sudo pip install -e ~/pynwjs  # required for pytest tests below
+  - pip install --user -e ~/pynwjs  # required for pytest tests below
   - npm install ./pynwjs  # not required, but make sure that a failure is detected
   # run actual tests
   - xvfb-run pytest
