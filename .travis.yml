@@ -13,7 +13,7 @@ install:
 before_script:
   - ln -s $PWD ~/pynwjs && cd ~
   # test package installation
-  - pip install --user -e ~/pynwjs  # required for pytest tests below
+  - sudo pip install -e ~/pynwjs  # required for pytest tests below
   - npm install ./pynwjs  # not required, but make sure that a failure is detected
   # download nwjs
   - mkdir -p ~/.nwjs
