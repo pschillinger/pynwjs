@@ -8,5 +8,8 @@ e.g., to notify about button presses or results of extended computations.
 
 * **License:** BSD 3
 * **Author:** Philipp Schillinger
+* **Repo:** https://github.com/pschillinger/pynwjs
+* **Docs:** https://pynwjs.readthedocs.io
+* **Issues:** https://github.com/pschillinger/pynwjs/issues
 
 PyNWJS does not have any dependencies itself, but expects either your application or the user system to provide the desired [NWJS](https://nwjs.io) executable.
