@@ -12,9 +12,6 @@ install:
 
 before_script:
   - ln -s $PWD ~/pynwjs && cd ~
-  # test package installation
-  - sudo pip install -e ~/pynwjs  # required for pytest tests below
-  - npm install ./pynwjs  # not required, but make sure that a failure is detected
   # download nwjs
   - mkdir -p ~/.nwjs
   - curl -s -o ~/.nwjs/nwjs.tar.gz https://dl.nwjs.io/v0.44.2/nwjs-v0.44.2-linux-x64.tar.gz
@@ -23,4 +20,8 @@ before_script:
 
 script:
   - cd ~/pynwjs
+  # test package installation
+  - sudo pip install -e ~/pynwjs  # required for pytest tests below
+  - npm install ./pynwjs  # not required, but make sure that a failure is detected
+  # run actual tests
   - xvfb-run pytest
