@@ -1,0 +1,12 @@
+{
+  "name": "pynwjs",
+  "version": "0.0.1",
+  "description": "Use nwjs as GUI in Python",
+  "main": "src/pynwjs/pynwjs.js",
+  "scripts": {
+    "test": "echo \"Error: tests implemented in Python, run pytest\" && exit 1"
+  },
+  "author": "Philipp Schillinger",
+  "license": "BSD 3",
+  "dependencies": {}
+}

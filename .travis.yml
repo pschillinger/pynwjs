@@ -1,0 +1,20 @@
+sudo: required
+dist: xenial
+language: generic
+  
+install:
+  - sudo apt-get update
+  - sudo apt-get install -y dpkg # fix https://github.com/travis-ci/travis-ci/issues/10132
+  - sudo apt install -y xvfb  # required for opening nwjs during tests on the ci server
+
+before-script:
+  # test package installation
+  - pip install --user -e .  # required for pytest tests below
+  - npm install .  # not required, but make sure that a failure is detected
+  # download nwjs
+  - curl -s -o ~/.nwjs/nwjs.tar.gz https://dl.nwjs.io/v0.44.2/nwjs-v0.44.2-linux-x64.tar.gz
+  - tar -xzf ~/.nwjs/nwjs.tar.gz --strip-components 1
+  - export NWJS=~/.nwjs/nw
+
+script:
+  - xvfb-run pytest
